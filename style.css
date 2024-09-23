@@ -1,0 +1,551 @@
+@font-face {
+  font-family: miracle;
+  src: url(/font/Miracle.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: bolder;
+}
+body {
+  background-image: url(img/10.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  width: 100%;
+  height: 8vh;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2.6vw;
+  font-family: miracle;
+}
+nav li {
+  margin-right: 2%;
+  margin-left: 1%;
+}
+nav a:hover{
+  color: #384168;
+}
+.img_branche{
+  position: fixed;
+  z-index: -1;
+  opacity: .3;
+  bottom: 0vh;
+}
+.img_branche img{
+  height: 800vh;
+  width: 100vw;
+}
+main {
+  color: #7f6c44;
+  font-family: miracle;
+  font-weight: 700;
+  z-index: 0;
+}
+.close{
+  display: none;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 4vw;
+  color: #384168;
+  text-decoration: underline;
+}
+.logo {
+  width: 40%;
+  cursor: pointer;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-50px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+.logo:hover {
+  cursor: pointer;
+  animation-name: bounce;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8vw;
+  color: #7f6c44;
+  margin-top: 5%;
+}
+#professeur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.prof {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  opacity: 0.6;
+  z-index: -1;
+}
+.photo_prof {
+  border-radius: 50%;
+  width: 30vw;
+  height: 30vw;
+}
+.presentation h1 {
+  font-size: 6vw;
+  color: #384168;
+  margin-bottom: 10%;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  color: #7f6c44;
+  width: 75%;
+  font-size: 1.6vw;
+}
+.eyecatch{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+.title {
+  display: flex;
+  justify-content: flex-start;
+  height: 20vh;
+  margin-left: 20%;
+  margin-top: 10%;
+}
+#enseignement {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.6vw;
+}
+.ens1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+}
+
+.ens1 img {
+  width: 95%;
+  margin-top: 10%;
+}
+
+.ens2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5%;
+  margin-top: 40%;
+  margin-right: 10%;
+}
+.ens2 img {
+  width: 90%;
+}
+.ens2 p {
+  margin-top: 10%;
+}
+.photo_cours img {
+  height: 45vh;
+  margin: 5%;
+}
+#horaires {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#horaires h1 {
+  margin-top: 10%;
+  margin-left: 20%;
+}
+.horaires {
+  border-collapse: collapse;
+  width: 80%;
+  font-size: 1.6vw;
+  color: #384168;
+  margin-left: 10%;
+}
+.horaires th {
+  border: 1px solid #384168;
+  text-align: center;
+}
+.horaires td {
+  border: 1px solid #384168;
+  text-align: center;
+}
+#ville{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 12vh;
+  width: 100%;
+}
+.horaires tr {
+  height: 12vh;
+}
+.bg_debutant {
+  background-color: rgb(158, 140, 35);
+}
+.bg_avance {
+  background-color: #7f6c44;
+}
+.adherants {
+  border-collapse: collapse;
+  width: 40%;
+  font-size: 1.6vw;
+  margin-top: 5%;
+  margin-left: 50%;
+  height: 10vh;
+}
+.adherants th {
+  border: 1px solid #384168;
+  text-align: center;
+}
+.adherants td {
+  border: 1px solid #384168;
+  text-align: center;
+}
+.debutant {
+  background-color: rgb(158, 140, 35);
+  color: #384168;
+}
+.avance {
+  background-color: #7f6c44;
+  color: #384168;
+  width: 50%;
+}
+#tarifs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.6vw;
+  margin-top: 5%;
+}
+.tarifcomplet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: 2;
+  width: 100%;
+}
+
+#tarifs span {
+  font-size: 1.8vw;
+  margin-top: 10%;
+  margin-bottom: 2%;
+  text-decoration: underline;
+}
+.titre_tarif {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10%;
+  margin-left: 26%;
+}
+.tarif_img {
+  margin-left: 20%;
+  width: 40vw;
+}
+.tarif_img img {
+  width: 100%;
+}
+#contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6vw;
+  margin-top: 5%;
+}
+.contact_t{
+  margin-top: 5%;
+}
+#contacts h1 {
+  margin-bottom: 8%;
+}
+#contacts img{
+  margin-top: 1%;
+  width: 20vw;
+}
+.picto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  font-size: 3vw;
+}
+a:link {
+  color: #7f6c44;
+  text-decoration: none;
+}
+a:visited {
+  color: #7f6c44;
+  text-decoration: none;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #384168;
+  height: 10vh;
+  margin-top: 5%;
+  font-size: 1.4vw;
+}
+
+/*screen transition -------------------------------------------*/
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Media queries telephone ---------------------------------*/
+
+@media only screen and (max-width: 736px) {
+  h1{
+    font-size: 6vw;
+  }
+  h2 {
+    display: none;
+  }
+  p{
+    font-size: 4.2vw;
+  }
+  article{
+    background-size: 80%;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+  }
+.logo{
+  margin-top: -5%;
+}
+.img_branche{
+  height: 558vh;
+}
+  #professeur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50%;
+  }
+  .prof {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+  }
+  .presentation h1 {
+    color: #384168;
+    margin-bottom: 10%;
+  }
+  
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    color: #7f6c44;
+    margin-top: 40%;
+    width: 85%;
+  }
+  .photo_prof {
+    border-radius: 50%;
+    width: 60vw;
+    height: 60vw;
+  }
+  .eyecatch img{
+    width: 80%;
+  }
+  .title {
+    display: flex;
+    justify-content: flex-start;
+    height: 5vh;
+    margin-left: 20%;
+    margin-top: 10%;
+  }
+  #enseignement {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+  .ens1,
+  .ens2 {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 0%;
+  }
+  .ens2{
+    margin-top: 5%;   
+  }
+
+  .ens1 img {
+    width: 80%;
+  }
+  .ens2 img {
+    width: 80%;
+  }
+  .ens1 p{
+    width: 80%;
+  }
+  .ens2 p{
+    width: 80%;
+  }
+  .logo{
+    width: 90%;
+  }
+
+  .horaires td{
+    width: 20%;
+  }
+  .horaires th{
+    width: 15%;
+  }
+  #ville{
+    height: 6vh;
+  }
+  .horaires tr {
+    height: 6vh;
+  }
+  .adherants{
+    height: 6vh;
+  }
+  #tarifs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #tarifs span {
+    font-size: 3.8vw;
+  }
+  .tarif_img{
+    margin-left: 0%;
+    width: 80%;
+    margin-top: -1%;
+  }
+
+  #contact{
+    margin-top: 5%;
+  }
+  .tarifcomplet {
+    margin-top: 3%;
+  }
+  #contacts img{
+    margin-top: 5%;
+    width: 30%;
+  }
+  .picto {
+    font-size: 5vw;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5vw;
+  }
+ 
+  /* Menu burger ---------------------------------------------*/
+/* Sidenav menu */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px;
+  background-color: #e8e8e8;
+  background-image: url(img/weed.png);
+  padding-top: 60px;
+  transition: left 0.5s ease;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #7f6c44;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #384168;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+  left: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+/* Icône burger */
+.burger-icon span {
+  display: block;
+  width: 45px;
+  height: 6px;
+  background-color: #7f6c44;
+  margin: 6px 0;
+  margin-top: 15%;
+
+}
+nav ul{
+  flex-direction: column;
+}
+.burger-icon {
+left: 0;
+}
+header{
+  justify-content: flex-start;
+  margin-left: 5%;
+}
+}
